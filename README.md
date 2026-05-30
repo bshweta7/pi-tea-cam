@@ -55,7 +55,7 @@ Features:
 Success Criteria:
 * User can start, monitor, and tune the system without editing code directly
 
-### v1.3.0 - Audio Alerts
+### v1.3.0 - Alerts
 
 Goal: Notify the user when motion is detected.
 
@@ -69,7 +69,7 @@ Success Criteria:
 
 * User can walk away from the tea station and still receive notification
 
-### v1.4.0 - Local Livestream
+### v1.4.0 - Livestream
 
 Goal: Enable the user to view the camera feed from another device on the local network.
 
