@@ -71,3 +71,13 @@ Success Criteria:
 
 - Reduce libcamera startup logging
 - Investigate SDN tuning warning
+
+
+## Notes
+
+### Frame Preparation
+* Convert to grayscale: enables easier calculation with a single number, instead of RGB. 
+* Blur: gaussian blur with kernel size 5 to preserve enough granularity to detect bubbles, while still removing noise. Tested with real data to find optimal kernel size. 
+* Difference: absolute difference between previous and current frame
+* Threshold: Any values in difference matrix below the threshold convert to 0
+* Motion Score: Percent of the pixels that changed
