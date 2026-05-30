@@ -64,3 +64,10 @@ Features:
 Success Criteria:
 
 * User can monitor and tune the system without editing code directly
+
+
+
+## Future Improvements
+
+- Reduce libcamera startup logging
+- Investigate SDN tuning warning
