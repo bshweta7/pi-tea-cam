@@ -4,6 +4,10 @@ A Raspberry Pi computer vision project that monitors a tea brewing setup and ale
 
 The project is being developed incrementally, with each version focused on a single capability before additional complexity is introduced.
 
+## Safety Disclaimer
+
+This project is an experimental monitoring aid. Do not rely on it as the only way to monitor a stove, kettle, or other heat source. Please use responsibly. 
+
 ## Roadmap
 
 ### V1 - Motion Detection
