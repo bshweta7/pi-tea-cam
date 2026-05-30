@@ -81,3 +81,13 @@ Success Criteria:
 * Difference: absolute difference between previous and current frame
 * Threshold: Any values in difference matrix below the threshold convert to 0
 * Motion Score: Percent of the pixels that changed
+
+
+## Version Notes
+
+### V1 Complete
+
+- Camera capture working
+- Motion score calculation implemented
+- Threshold-based motion detection implemented
+- Tested on Raspberry Pi
