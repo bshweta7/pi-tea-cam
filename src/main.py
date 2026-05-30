@@ -1,7 +1,7 @@
 import time
 
 from picam.camera import create_camera
-from picam.motion import calculate_motion_score, prepare_frame
+from picam.motion import calculate_motion_score, prepare_frame, is_motion_detected
 
 CAPTURE_INTERVAL_SECONDS = 2
 
@@ -23,7 +23,14 @@ def main() -> None:
             # Skip first frame
             if previous_frame is not None:
                 motion_score = calculate_motion_score(previous_frame, current_frame)
-                print(f"Frame {frame_number} | Motion score: {motion_score:.4f}")
+
+                motion_detected = is_motion_detected(motion_score)
+
+                print(
+                    f"Frame {frame_number} | "
+                    f"Motion score: {motion_score:.5f} | "
+                    f"Motion detected: {motion_detected}"
+                )
 
             previous_frame = current_frame
             frame_number += 1

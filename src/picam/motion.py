@@ -3,6 +3,7 @@ import numpy as np
 
 DIFF_THRESHOLD = 25
 BLUR_KERNEL_SIZE = (5, 5)
+MOTION_SCORE_THRESHOLD = 0.001
 
 
 def prepare_frame(frame: np.ndarray) -> np.ndarray:
@@ -21,3 +22,7 @@ def calculate_motion_score(previous_frame: np.ndarray, current_frame: np.ndarray
 
     return changed_pixels / total_pixels
 
+
+def is_motion_detected(motion_score: float) -> bool:
+    """Return true if motion score is higher than threshold"""
+    return motion_score > MOTION_SCORE_THRESHOLD
